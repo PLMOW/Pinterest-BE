@@ -40,7 +40,7 @@ class UserController {
       });
 
       // res.headers('Authorization', `Bearer ${token}`); // Access-Control-Expose-Headers
-      res.status(200).json({
+      return res.status(200).json({
         userId: existUser.userId,
         token: `Bearer ${token}`,
         message: '로그인을 성공하였습니다.',
