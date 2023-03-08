@@ -52,7 +52,7 @@ class UserController {
 
   // 회원 검증
   userValidate = async (req, res, next) => {
-    const { token } = req.body;
+    const token = req.body.data;
     try {
       if (!token) {
         throw new Error('비회원');
